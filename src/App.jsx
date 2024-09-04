@@ -1,5 +1,6 @@
-import React from 'react';
-import Counter from './Counter';
+import React from "react";
+import Counter from "./Counter";
+import "./styles.css";
 
 function App() {
   return (
@@ -8,5 +9,4 @@ function App() {
     </div>
   );
 }
-
 export default App;

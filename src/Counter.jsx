@@ -14,6 +14,13 @@ function Counter() {
     setValue(newValue);
   };
 
+  const handleDouble = () => {
+    setValue(value * 2);
+  };
+
+  const handleNegate = () => {
+    setValue(value * -1);
+  };
   return (
     <div>
       <h1>Please Add or Subtract</h1>
@@ -38,6 +45,30 @@ function Counter() {
             symbol="-"
           />
         </div>
+      </div>
+      <div>
+        <Button
+          action={() => {
+            handleDouble();
+          }}
+          symbol="X2"
+        />
+      </div>
+      <div>
+        <Button
+          action={() => {
+            handleNegate();
+          }}
+          symbol="-/+"
+        />
+      </div>
+      <div>
+        <Button
+          action={() => {
+            (document.getElementById("number").value = "0"), setValue(0);
+          }}
+          symbol="C"
+        />
       </div>
     </div>
   );
